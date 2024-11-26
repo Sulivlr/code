@@ -4,6 +4,10 @@ const Vigenere = require("caesar-salad/vigenere");
 const app = express();
 const port = 8000;
 
+app.get('/', (req, res) => {
+    res.send('Hello Ramil!');
+});
+
 app.get('/:echo', (req, res) => {
     const echo = req.params.echo
     res.send(echo);
